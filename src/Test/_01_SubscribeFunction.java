@@ -26,4 +26,22 @@ public class _01_SubscribeFunction extends BaseDriver {
         Assert.assertTrue(actualMessage.contains("Success"));
     }
 
+    @Test
+    public void unsubscribeFunctionTest() {
+
+        HomePageElements homePageElements = new HomePageElements(driver);
+        MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
+
+        homePageElements.myAccountIcon.click();
+        homePageElements.myAccountButton.click();
+
+        myAccountPageElements.newsletterButton.click();
+        myAccountPageElements.unsubscribeNewsletterButton.click();
+        myAccountPageElements.continueButton.click();
+
+        String actualMessage = myAccountPageElements.successMessage.getText();
+
+        Assert.assertTrue(actualMessage.contains("Success"));
+    }
+
 }

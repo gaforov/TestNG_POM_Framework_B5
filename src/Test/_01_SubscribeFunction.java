@@ -3,7 +3,7 @@ package Test;
 import POM.HomePageElements;
 import POM.MyAccountPageElements;
 import Utils.BaseDriver;
-import org.testng.Assert;
+import Utils.ReusableMethods;
 import org.testng.annotations.Test;
 
 public class _01_SubscribeFunction extends BaseDriver {
@@ -13,6 +13,7 @@ public class _01_SubscribeFunction extends BaseDriver {
 
         HomePageElements homePageElements = new HomePageElements(driver);
         MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
+        ReusableMethods reusableMethods = new ReusableMethods();
 
         homePageElements.myAccountIcon.click();
         homePageElements.myAccountButton.click();
@@ -21,9 +22,8 @@ public class _01_SubscribeFunction extends BaseDriver {
         myAccountPageElements.subscribeNewsletterButton.click();
         myAccountPageElements.continueButton.click();
 
-        String actualMessage = myAccountPageElements.successMessage.getText();
+        reusableMethods.verifySuccessMessage(driver);
 
-        Assert.assertTrue(actualMessage.contains("Success"));
     }
 
     @Test
@@ -31,6 +31,7 @@ public class _01_SubscribeFunction extends BaseDriver {
 
         HomePageElements homePageElements = new HomePageElements(driver);
         MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
+        ReusableMethods reusableMethods = new ReusableMethods();
 
         homePageElements.myAccountIcon.click();
         homePageElements.myAccountButton.click();
@@ -39,9 +40,8 @@ public class _01_SubscribeFunction extends BaseDriver {
         myAccountPageElements.unsubscribeNewsletterButton.click();
         myAccountPageElements.continueButton.click();
 
-        String actualMessage = myAccountPageElements.successMessage.getText();
+        reusableMethods.verifySuccessMessage(driver);
 
-        Assert.assertTrue(actualMessage.contains("Success"));
     }
 
 }

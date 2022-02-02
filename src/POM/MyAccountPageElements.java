@@ -18,6 +18,9 @@ public class MyAccountPageElements {
     @FindBy(xpath = "(//input[@name='newsletter'])[1]")
     public WebElement subscribeNewsletterButton;
 
+    @FindBy(xpath = "(//input[@name='newsletter'])[2]")
+    public WebElement unsubscribeNewsletterButton;
+
     @FindBy(xpath = "//input[@value='Continue']")
     public WebElement continueButton;
 

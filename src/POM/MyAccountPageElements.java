@@ -1,6 +1,5 @@
 package POM;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,5 +25,14 @@ public class MyAccountPageElements {
 
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     public WebElement successMessage;
+
+    @FindBy(xpath = "//a[text()='Edit Account']")
+    public WebElement editAccountButton;
+
+    @FindBy(id = "input-firstname")
+    public WebElement firstNameInput;
+
+    @FindBy(id = "input-lastname")
+    public WebElement lastNameInput;
 
 }

@@ -10,7 +10,7 @@ public class ReusableMethods {
         MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
 
         String actualMessage = myAccountPageElements.successMessage.getText();
-        Assert.assertTrue(actualMessage.contains("Success"));
+        Assert.assertTrue(actualMessage.toLowerCase().contains("success"));
     }
 
 }

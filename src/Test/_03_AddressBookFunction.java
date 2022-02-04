@@ -43,6 +43,7 @@ public class _03_AddressBookFunction extends BaseDriver {
 
     }
 
+    // When you use "dependsOnMethod" if addNewAddressTest fails editAddressTest will not get executed
     @Test(dependsOnMethods = "addNewAddressTest")
     public void editAddressTest() {
 

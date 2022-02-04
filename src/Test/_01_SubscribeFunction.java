@@ -8,12 +8,15 @@ import org.testng.annotations.Test;
 
 public class _01_SubscribeFunction extends BaseDriver {
 
+    HomePageElements homePageElements;
+    MyAccountPageElements myAccountPageElements;
+    ReusableMethods reusableMethods = new ReusableMethods();
+
     @Test
     public void subscribeFunctionTest() {
 
-        HomePageElements homePageElements = new HomePageElements(driver);
-        MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
-        ReusableMethods reusableMethods = new ReusableMethods();
+        homePageElements = new HomePageElements(driver);
+        myAccountPageElements = new MyAccountPageElements(driver);
 
         homePageElements.myAccountIcon.click();
         homePageElements.myAccountButton.click();
@@ -29,9 +32,8 @@ public class _01_SubscribeFunction extends BaseDriver {
     @Test
     public void unsubscribeFunctionTest() {
 
-        HomePageElements homePageElements = new HomePageElements(driver);
-        MyAccountPageElements myAccountPageElements = new MyAccountPageElements(driver);
-        ReusableMethods reusableMethods = new ReusableMethods();
+        homePageElements = new HomePageElements(driver);
+        myAccountPageElements = new MyAccountPageElements(driver);
 
         homePageElements.myAccountIcon.click();
         homePageElements.myAccountButton.click();

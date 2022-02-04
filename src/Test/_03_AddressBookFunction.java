@@ -13,7 +13,7 @@ public class _03_AddressBookFunction extends BaseDriver {
     MyAccountPageElements myAccountPageElements;
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test(priority = 1)
+    @Test
     public void addNewAddressTest() {
 
         homePageElements = new HomePageElements(driver);
@@ -43,7 +43,7 @@ public class _03_AddressBookFunction extends BaseDriver {
 
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "addNewAddressTest")
     public void editAddressTest() {
 
         homePageElements = new HomePageElements(driver);
@@ -68,7 +68,7 @@ public class _03_AddressBookFunction extends BaseDriver {
 
     }
 
-    @Test(priority = 3)
+    @Test(dependsOnMethods = "editAddressTest")
     public void deleteAddressTest() {
 
         homePageElements = new HomePageElements(driver);

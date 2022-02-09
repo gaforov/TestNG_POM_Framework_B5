@@ -1,0 +1,17 @@
+<suite name="Subscribe function Cross-Browser Test">
+
+    <test name="Test in chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="Test._01_SubscribeFunction"></class>
+        </classes>
+    </test>
+
+    <test name="Test in firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="Test._01_SubscribeFunction"></class>
+        </classes>
+    </test>
+
+</suite>

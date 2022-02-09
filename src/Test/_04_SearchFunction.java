@@ -14,7 +14,7 @@ public class _04_SearchFunction extends BaseDriver {
     HomePageElements homePageElements;
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = "Regression")
     public void searchFunctionTest() {
 
         homePageElements = new HomePageElements(driver);

@@ -13,7 +13,7 @@ public class _03_AddressBookFunction extends BaseDriver {
     MyAccountPageElements myAccountPageElements;
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Test
+    @Test(groups = "Regression")
     public void addNewAddressTest() {
 
         homePageElements = new HomePageElements(driver);
